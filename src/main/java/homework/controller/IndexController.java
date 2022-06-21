@@ -25,6 +25,6 @@ public class IndexController { // 타임리프 없이 시작페이지 반환하�
          boardservice.write(boardDto);
     }
 
-// 깃
+// 깃3
 }
 
