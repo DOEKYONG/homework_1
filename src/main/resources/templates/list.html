@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+리스ㅅㄷ
+<div th:each="array:${blist}">
+
+    <a th:href=" @{/view/{bno}(bno=${array.getBno()})}" > <span th:text = "${array.getBno()} "></span></a>
+    <span th:text = "${array.getBtitle()}"></span>
+
+
+</div>
+
+</body>
+</html>

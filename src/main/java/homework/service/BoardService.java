@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @Service
 public class BoardService {
@@ -16,5 +17,13 @@ public class BoardService {
 
             boardDao.write(boardDto);
 
+    }
+    public ArrayList<BoardDto>getboardlist() {
+      return   boardDao.getboardlist();
+
+    }
+
+    public BoardDto getboard( int bno ) {
+        return boardDao.getboard(bno);
     }
 }
