@@ -53,9 +53,9 @@ public class IndexController { // 타임리프 없이 시작페이지 반환하�
     }
 
     // 업데이트 페이지이동
-    @GetMapping("/update/{bno}")
-    public String goupdate(@PathVariable("bno") int bno)
-    { request.getSession().setAttribute("bno",bno);
+    @GetMapping("/update")
+    public String goupdate()
+    {
         return "update";}
 
     //업데이트 메소드
