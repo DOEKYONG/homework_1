@@ -100,6 +100,27 @@ public class BoardDao {
 
     }
 
+    public boolean update( BoardDto boardDto ) {
+        String sql = "update board set btitle=? , bcontent=? where bno = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString( 1 , boardDto.getBtitle() );
+            ps.setString( 2 , boardDto.getBcontent() );
+            ps.setInt( 3 , boardDto.getBno() );
+            ps.executeUpdate();
+            return true;
+
+        }
+        catch (Exception e) { System.out.println( e );} return false;
+    }
+
+    public boolean delete( int bno ) {
+
+        String sql = "delete from board where bno="+bno;
+        try { ps = con.prepareStatement(sql); ps.executeUpdate(); return true;}
+        catch (Exception e) {System.out.println();} return false;
+    }
+
 
 
 }

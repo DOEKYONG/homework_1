@@ -20,10 +20,26 @@ public class BoardService {
     }
     public ArrayList<BoardDto>getboardlist() {
       return   boardDao.getboardlist();
-
     }
-
     public BoardDto getboard( int bno ) {
         return boardDao.getboard(bno);
     }
+
+    public boolean update(BoardDto boardDto) {
+      //  System.out.println(boardDto.toString());
+
+       boolean result = boardDao.update(boardDto);
+       return result;
+
+    }
+
+    public boolean delete(int bno) {
+
+    boolean result = boardDao.delete(bno);
+      //  System.out.println(bno);
+        return result;
+
+    }
+
+
 }

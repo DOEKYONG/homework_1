@@ -5,11 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-제목
+<form action="/delete" method="POST">
+
+    제목
 <div th:text="${board.getBtitle}"> </div>
 내용
 <div th:text="${board.getBcontent}"> </div>
+<input type="submit" value="삭제">
+</form>
 
-
+<a th:href=" @{/update/{bno}(bno=${board.getBno()})}" >수정하기</a>
 </body>
 </html>
